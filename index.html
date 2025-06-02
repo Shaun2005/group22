@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official campaign site of John Doe - Join the movement for change." />
+  <meta name="keywords" content="Politics, Campaign, Volunteer, Donate, Events" />
+  <meta name="author" content="Campaign Team" />
+  <title>John Doe for Change | Home</title>
+
+  <!-- SEO & Social -->
+  <link rel="canonical" href="https://www.johndoeforchange.com" />
+  <meta property="og:title" content="John Doe for Change" />
+  <meta property="og:description" content="Support John Doe’s vision for a better future. Volunteer, donate, and stay informed." />
+
+  <!-- Styles -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #0077cc; /* Blue background */
+      color: #fff;
+    }
+    header, footer {
+      background: #003366;
+      color: #fff;
+      padding: 1rem 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .breadcrumb {
+      margin: 1rem;
+      font-size: 0.9rem;
+    }
+    .breadcrumb a {
+      color: #cce5ff;
+      text-decoration: none;
+    }
+    .hero {
+      background: rgba(0, 0, 0, 0.3);
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    .form-section input, .form-section textarea, .form-section button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+    }
+    .form-section button {
+      background: #0055aa;
+      color: white;
+      cursor: pointer;
+    }
+    footer a {
+      color: #ccccff;
+      margin-right: 15px;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.85rem;
+      padding-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main navigation">
+    <div><strong>John Doe for Change</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="#">Vision</a>
+      <a href="#">Events</a>
+      <a href="#">Donate</a>
+      <a href="#">Volunteer</a>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a> &gt; Welcome
+</div>
+
+<section class="hero" role="banner">
+  <h1>Join the Movement for a Better Tomorrow</h1>
+</section>
+
+<section class="section" id="about">
+  <h2>About John Doe</h2>
+  <p>John Doe is running for a future that works for everyone. With years of public service and a clear vision, John is committed to healthcare, education, and climate action.</p>
+</section>
+
+<section class="section" id="vision">
+  <h2>Our Vision</h2>
+  <p>We believe in equality, justice, and opportunity for all. Explore our policy goals and our commitment to community-driven solutions.</p>
+</section>
+
+<section class="section" id="events">
+  <h2>Upcoming Events</h2>
+  <ul>
+    <li>Town Hall – June 15th</li>
+    <li>Community Clean-Up – July 1st</li>
+  </ul>
+</section>
+
+<section class="section form-section" id="donate">
+  <h2>Support the Campaign</h2>
+  <form>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="number" name="amount" placeholder="Donation Amount ($)" required />
+    <button type="submit">Donate Now</button>
+  </form>
+</section>
+
+<section class="section form-section" id="volunteer">
+  <h2>Volunteer with Us</h2>
+  <form>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Why do you want to volunteer?" required></textarea>
+    <button type="submit">Sign Up</button>
+  </form>
+</section>
+
+<footer>
+  <div>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 John Doe for Change. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('load', () => {
+    if (!localStorage.getItem('cookieConsent')) {
+      const banner = document.createElement('div');
+      banner.innerHTML = \`
+        <div style="position: fixed; bottom: 0; background: #333; color: #fff; padding: 1rem; width: 100%; text-align: center;">
+          We use cookies to improve your experience. <button onclick="acceptCookies()" style="margin-left: 1rem;">Accept</button>
+        </div>
+      \`;
+      document.body.appendChild(banner);
+    }
+  });
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', true);
+    document.querySelector('body > div:last-child').remove();
+  }
+</script>
+
+</body>
+</html>
